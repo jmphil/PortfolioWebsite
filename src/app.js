@@ -1,6 +1,12 @@
+const hamburgerButton = document.getElementById('hamburger')
+const navList = document.getElementById('nav-list')
+
+function toggleButton () {
+    navList.classList.toggle('show')
+}
+hamburgerButton.addEventListener('click', toggleButton)
 // function([string1, string2],target id,[color1,color2])    
 consoleText(['Full Stack Developer.', 'Cloud Engineer.', 'IT Professional.'], 'text',['#fff','#fff','#fff']);
-
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
@@ -52,3 +58,14 @@ function consoleText(words, id, colors) {
         }
     }, 400)
 }
+
+// Get visitor count
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+        document.getElementById("visits").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "https", true);
+xhttp.send();
+
