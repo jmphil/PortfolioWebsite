@@ -5,6 +5,7 @@ function toggleButton () {
     navList.classList.toggle('show')
 }
 hamburgerButton.addEventListener('click', toggleButton)
+
 // function([string1, string2],target id,[color1,color2])    
 consoleText(['Full Stack Developer.', 'Cloud Engineer.', 'IT Professional.'], 'text',['#fff','#fff','#fff']);
 function consoleText(words, id, colors) {
