@@ -1,3 +1,4 @@
+//hamburger functionality 
 const hamburgerButton = document.getElementById('hamburger')
 const navList = document.getElementById('nav-list')
 
@@ -6,6 +7,7 @@ function toggleButton () {
 }
 hamburgerButton.addEventListener('click', toggleButton)
 
+//typewriter
 // function([string1, string2],target id,[color1,color2])    
 consoleText(['Full Stack Developer.', 'Cloud Engineer.', 'IT Professional.'], 'text',['#fff','#fff','#fff']);
 function consoleText(words, id, colors) {
@@ -61,12 +63,13 @@ function consoleText(words, id, colors) {
 }
 
 // Get visitor count
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-        document.getElementById("visits").innerHTML = xhttp.responseText;
-    }
-};
-xhttp.open("GET", "https", true);
-xhttp.send();
-
+// id = visits
+// need API target
+fetch('https://xxxxxx')
+    .then(response => response.json())
+    .then((data) => {
+        document.getElementById('visits').innerText = data.count
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    })
