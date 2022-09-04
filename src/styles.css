@@ -211,7 +211,7 @@ button {
 
 .project-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 1000px) {
