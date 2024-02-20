@@ -9,7 +9,7 @@ hamburgerButton.addEventListener('click', toggleButton)
 
 //typewriter
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Full Stack Developer.', 'Cloud Engineer.', 'IT Specialist.'], 'text',['#fff','#fff','#fff']);
+consoleText(['Full Stack Developer.', 'Network Engineer.'], 'text',['#fff','#fff','#fff']);
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
